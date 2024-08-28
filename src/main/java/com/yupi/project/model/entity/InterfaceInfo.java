@@ -1,9 +1,11 @@
 package com.yupi.project.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -30,9 +32,18 @@ public class InterfaceInfo implements Serializable {
     private String description;
 
     /**
-     * 用户名
+     * 接口地址
      */
     private String url;
+
+    /**
+     * 请求参数
+     * [
+     *  {"name": "username","type": "string"}
+     * ]
+     *
+     */
+    private String requestParams;
 
     /**
      * 请求头
@@ -62,12 +73,14 @@ public class InterfaceInfo implements Serializable {
     /**
      * 创建时间
      */
-    private Date createTime;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "UTC")
+    private LocalDateTime createTime;
 
     /**
      * 更新时间
      */
-    private Date updateTime;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "UTC")
+    private LocalDateTime updateTime;
 
     /**
      * 是否删除(0-未删, 1-已删)
