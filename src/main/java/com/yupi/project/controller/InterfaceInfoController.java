@@ -29,7 +29,7 @@ import java.util.List;
 /**
  * 接口管理
  *
- * @author yupi
+ * @author xiushi
  */
 @RestController
 @RequestMapping("/interfaceInfo")
@@ -307,7 +307,7 @@ public class InterfaceInfoController {
         User loginUser = userService.getLoginUser(request);
         String accessKey = loginUser.getAccessKey();
         String secretKey = loginUser.getSecretKey();
-        XiuApiClient tempClient = new XiuApiClient(accessKey,secretKey);
+        XiuApiClient tempClient = new XiuApiClient(accessKey, secretKey);
         // 我们只需要进行测试调用，所以我们需要解析传递过来的参数。
         Gson gson = new Gson();
         // 将用户请求参数转换为com.xiu.xiuapiclientsdk.model.User对象
