@@ -2,7 +2,8 @@ package com.xiushi.project.mapper;
 
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.xiushi.project.model.entity.InterfaceInfo;
+import com.xiushi.xiushicommon.model.entity.InterfaceInfo;
+
 
 /**
 * @author 86130

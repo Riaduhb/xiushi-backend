@@ -7,7 +7,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xiushi.project.common.ErrorCode;
 import com.xiushi.project.exception.BusinessException;
 import com.xiushi.project.mapper.UserMapper;
-import com.xiushi.project.model.entity.User;
+import com.xiushi.xiushicommon.model.entity.User;
 import com.xiushi.project.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

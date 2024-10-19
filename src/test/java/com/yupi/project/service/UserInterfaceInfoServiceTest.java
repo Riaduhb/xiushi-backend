@@ -1,5 +1,5 @@
 package com.yupi.project.service;
-
+import com.xiushi.project.MyApplication;
 import com.xiushi.project.service.UserInterfaceInfoService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
@@ -7,7 +7,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
 
-@SpringBootTest
+@SpringBootTest(classes = MyApplication.class)
 public class UserInterfaceInfoServiceTest {
 
     @Resource

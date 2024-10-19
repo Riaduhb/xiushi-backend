@@ -1,7 +1,7 @@
 package com.yupi.project.service;
 
-import com.xiushi.project.model.entity.User;
 import com.xiushi.project.service.UserService;
+import com.xiushi.xiushicommon.model.entity.User;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

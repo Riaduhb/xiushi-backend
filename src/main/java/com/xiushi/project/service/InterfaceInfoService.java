@@ -2,7 +2,7 @@ package com.xiushi.project.service;
 
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.xiushi.project.model.entity.InterfaceInfo;
+import com.xiushi.xiushicommon.model.entity.InterfaceInfo;
 
 /**
 * @author 86130

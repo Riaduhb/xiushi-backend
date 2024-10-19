@@ -1,4 +1,4 @@
-package com.xiushi.project.model.entity;
+package com.xiushi.xiushicommon.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonFormat;

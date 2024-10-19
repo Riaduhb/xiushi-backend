@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.xiushi.project.annotation.AuthCheck;
 import com.xiushi.project.common.ErrorCode;
 import com.xiushi.project.exception.BusinessException;
-import com.xiushi.project.model.entity.User;
+import com.xiushi.xiushicommon.model.entity.User;
 import com.xiushi.project.service.UserService;
 import org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.ProceedingJoinPoint;

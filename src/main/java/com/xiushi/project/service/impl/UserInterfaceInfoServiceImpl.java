@@ -5,8 +5,8 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.xiushi.project.common.ErrorCode;
 import com.xiushi.project.exception.BusinessException;
 import com.xiushi.project.mapper.UserInterfaceInfoMapper;
-import com.xiushi.project.model.entity.UserInterfaceInfo;
 import com.xiushi.project.service.UserInterfaceInfoService;
+import com.xiushi.xiushicommon.model.entity.UserInterfaceInfo;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserInterfaceInfoServiceImpl extends ServiceImpl<UserInterfaceInfoMapper, UserInterfaceInfo>
     implements UserInterfaceInfoService {
+
     @Override
     public void validUserInterfaceInfo(UserInterfaceInfo userInterfaceInfo, boolean add) {
         if (userInterfaceInfo == null) {
