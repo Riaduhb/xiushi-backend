@@ -51,11 +51,13 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
 
     private static final List<String> IP_WHITE_LIST = Arrays.asList("127.0.0.1");
 
+    private static final String INIERFACE_HOST = "http://localhost:8123";
+
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         //1. 请求日志
         ServerHttpRequest request = exchange.getRequest();
-        String path = request.getPath().value();
+        String path = INIERFACE_HOST + request.getPath().value();
         String method = request.getMethod().toString();
         log.info("请求唯一标识:" + request.getId());
         log.info("请求路径:" + path);
@@ -82,7 +84,7 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
         String sign = headers.getFirst("sign");
         String body = headers.getFirst("body");
 
-        // todo 实际情况应该是去数据库中查是否已分配给用户
+        //  实际情况应该是去数据库中查是否已分配给用户
         User invokeUser = null;
         try {
             //调用内部服务，根据访问密钥获取用户信息
@@ -135,13 +137,12 @@ public class CustomGlobalFilter implements GlobalFilter, Ordered {
             //如果获取接口信息时出现异常，记录错误日志
             log.error("getInterfaceInfo error", e);
         }
-
         //检查是否成功获取到接口信息
         if (interfaceInfo == null) {
             //如果未获取到接口信息，返回处理未授权的响应
             return handleNoAuth(response);
         }
-
+        //todo 是否有调用次数
         //5. 请求转发，调用模拟接口
         // Mono<Void> filter = chain.filter(exchange);
         //return filter;
