@@ -3,7 +3,7 @@ package com.xiushi.project.constant;
 /**
  * 通用常量
  *
- * @author yupi
+ * @author xiushi
  */
 public interface CommonConstant {
 

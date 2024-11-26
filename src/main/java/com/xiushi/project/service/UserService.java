@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletRequest;
 /**
  * 用户服务
  *
- * @author yupi
+ * @author xiushi
  */
-public interface UserService extends IService<User> {
+public interface  UserService extends IService<User> {
 
     /**
      * 用户注册

@@ -24,7 +24,7 @@ import static com.xiushi.project.constant.UserConstant.USER_LOGIN_STATE;
 /**
  * 用户服务实现类
  *
- * @author yupi
+ * @author xiushi
  */
 @Service
 @Slf4j

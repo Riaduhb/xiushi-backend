@@ -3,7 +3,7 @@ package com.xiushi.project.common;
 /**
  * 返回工具类
  *
- * @author yupi
+ * @author xiushi
  */
 public class ResultUtils {
 
